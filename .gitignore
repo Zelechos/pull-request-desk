@@ -1,0 +1,7 @@
+/ether_env/.env
+/ether_env/Lib
+/ether_env/Scripts
+/ether_env/pyvenv.cfg
+
+node_modules
+package-lock.json
