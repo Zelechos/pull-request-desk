@@ -1,0 +1,15 @@
+{
+  "name": "Dev Environment",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "backend",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "vscjava.vscode-java-pack", // Soporte para Java
+    "esbenp.prettier-vscode",  // Opcional para formato de código
+    "dbaeumer.vscode-eslint"   // Soporte para linting
+  ],
+  "settings": {
+    "java.home": "/usr/lib/jvm/java-21-openjdk"
+  },
+  "postCreateCommand": "mvn clean install -DskipTests"
+}
