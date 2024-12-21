@@ -1,5 +1,4 @@
-# Pull Request Desk
+# Pull Request Lab
 
 ---
-A Desktop project to integrate and review pull request of system version platform like Github, Gitlab, BitBucket
-
+Is a Saas to Pull Request Control & Analize metrics about performance of devs 
