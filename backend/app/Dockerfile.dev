@@ -1,0 +1,27 @@
+# Usa la imagen de OpenJDK con soporte para Java 21
+FROM openjdk:21-jdk-slim
+
+# Instala Maven para construir el proyecto dentro del contenedor
+RUN apt-get update && apt-get install -y maven
+
+# Crea el directorio de trabajo en el contenedor
+WORKDIR /app
+
+# Copia los archivos de configuración de Maven (pom.xml y .mvn)
+COPY pom.xml ./
+COPY .mvn ./.mvn
+
+# Descarga las dependencias del proyecto (caché optimizado)
+RUN mvn dependency:go-offline -B
+
+# Copia el resto del proyecto al contenedor
+COPY src ./src
+
+# Construye la aplicación
+RUN mvn package -DskipTests
+
+# Exponer el puerto utilizado por Spring Boot
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación
+CMD ["java", "-jar", "target/*.jar"]

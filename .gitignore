@@ -3,5 +3,5 @@
 /ether_env/Scripts
 /ether_env/pyvenv.cfg
 
-node_modules
+/frontend/app/node_modules
 package-lock.json
