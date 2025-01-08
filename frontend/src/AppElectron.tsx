@@ -1,22 +1,18 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+function AppElectron() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://img.icons8.com/?size=150&id=13159&format=png" target="_blank">
+          <img src={reactLogo} className="logo Electron" alt="Electron logo" />
         </a>
       </div>
-      <h1>Vite + React + Electron</h1>
+      <h1>Electron</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -32,5 +28,5 @@ function App() {
   )
 }
 
-export default App;
+export default AppElectron;
 
